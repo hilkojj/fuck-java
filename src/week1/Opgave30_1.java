@@ -1,5 +1,11 @@
 package week1;
 
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextArea;
+import javafx.stage.Stage;
+
 public class Opgave30_1 extends Application {
 
     @Override // Override the start method in the Application class
