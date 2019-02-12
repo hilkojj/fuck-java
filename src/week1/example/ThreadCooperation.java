@@ -1,4 +1,4 @@
-package chapter30;
+package week1.example;
 
 import java.util.concurrent.*;
 import java.util.concurrent.locks.*;

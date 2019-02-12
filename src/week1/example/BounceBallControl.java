@@ -1,4 +1,4 @@
-package chapter15;
+package week1.example;
 
 import javafx.application.Application;
 import javafx.stage.Stage;

@@ -1,3 +1,5 @@
+package week1.example;
+
 public class TaskThreadDemo {
   public static void main(String[] args) {
     // Create tasks

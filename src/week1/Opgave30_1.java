@@ -22,6 +22,6 @@ public class Opgave30_1 extends Application {
     }
 
     public static void main(String[] args) {
-        System.out.println("test");
+        launch(args);
     }
 }

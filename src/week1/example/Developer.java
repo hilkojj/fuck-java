@@ -1,3 +1,5 @@
+package week1.example;
+
 public class Developer {
     String name;
     int age;
