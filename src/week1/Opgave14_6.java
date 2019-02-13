@@ -15,12 +15,11 @@ public class Opgave14_6 extends Application { // DONE
         GridPane grid = new GridPane();
         int size = 8;
         for(int i=0; i<size*size; i++)
-            grid.add(new Rectangle(20, 20, Paint.valueOf(((i+i/size)%2==0)?"black":"white")), i%size, i/size);
+            grid.add(new Rectangle(40, 40, Paint.valueOf(((i+i/size)%2==0)?"black":"white")), i%size, i/size);
         grid.setAlignment(Pos.CENTER);
 
         // Create a scene and place it in the stage
-        Scene scene = new Scene(grid, 400, 400);
-        primaryStage.setTitle("FindGrade"); // Set the stage title
+        Scene scene = new Scene(grid, 400, 400, Paint.valueOf("gray"));
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
     }

@@ -35,7 +35,6 @@ public class Opgave14_2 extends Application { // DONE
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(grid, 420, 200);
-        primaryStage.setTitle("FindGrade"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
     }

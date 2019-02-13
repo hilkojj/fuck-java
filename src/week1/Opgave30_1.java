@@ -6,7 +6,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-public class Opgave30_1 extends Application {
+public class Opgave30_1 extends Application { // DONE
 
     @Override // Override the start method in the Application class
     public void start(Stage primaryStage) {

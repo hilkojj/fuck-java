@@ -3,7 +3,7 @@ package week1;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Opgave30_4 {
+public class Opgave30_4 { // DONE
     public static int sum = 0;
 
     public static void main(String[] args) {
