@@ -1,5 +1,9 @@
 package week2.stock;
 
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 // the Client
 public class StockApp {
     public static void main(String[] args) {
@@ -10,9 +14,11 @@ public class StockApp {
         // create and register concrete observer
         StockObserver observer1 = new StockObserver(stockGrabber);
 
-        stockGrabber.setIBMPrice(197.00);
-        stockGrabber.setAAPLPrice(677.60);
-        stockGrabber.setGOOGPrice(676.40);
+        ScheduledExecutorService executor = Executors.newScheduledThreadPool(3);
+//        for(int i=0; i<3; i++)
+        executor.scheduleAtFixedRate(new GetTheStock(stockGrabber, "name", 1.23d), 0, 3, TimeUnit.SECONDS);
+
+//        executor.shutdown();
     }
 }
 
