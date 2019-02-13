@@ -1,16 +1,18 @@
 package week2.stock;
 
+import week2.stock.Stocks.StockType;
+
 import java.text.DecimalFormat;
 
 public class GetTheStock implements Runnable {
 
     private StockGrabber stockGrabber;
-    private String stockName;
+    private StockType stockType;
     private double price;
 
     public GetTheStock(StockGrabber stockGrabber, String stockName, double price) {
         this.stockGrabber = stockGrabber;
-        this.stockName = stockName;
+        this.stockType = StockType.fromString(stockName);
         this.price = price;
     }
 
@@ -20,6 +22,13 @@ public class GetTheStock implements Runnable {
         DecimalFormat df = new DecimalFormat("#.##");
         price = Double.valueOf(df.format((price + randNum)));
 
-        stockGrabber.setApplePrice(price);
+        if (stockType == StockType.APPLE)
+            stockGrabber.setApplePrice(price);
+
+        if (stockType == StockType.IBM)
+            stockGrabber.setIBMPrice(price);
+
+        if (stockType == StockType.ORACLE)
+            stockGrabber.setOraclePrice(price);
     }
 }

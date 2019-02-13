@@ -5,7 +5,7 @@ public enum StockType {
     IBM,
     ORACLE;
 
-    StockType fromString(String str) {
+    public static StockType fromString(String str) {
         return StockType.valueOf(str.toUpperCase());
     }
 }
