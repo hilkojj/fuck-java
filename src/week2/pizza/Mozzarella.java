@@ -1,3 +1,5 @@
+package week2.pizza;
+
 // a Concrete Decorator
 public class Mozzarella extends ToppingDecorator {
 
