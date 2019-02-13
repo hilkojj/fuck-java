@@ -1,3 +1,5 @@
+package week2.stock;
+
 public class StockObserver implements Observer {
     
     private double ibmPrice;

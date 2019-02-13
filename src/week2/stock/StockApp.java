@@ -1,3 +1,5 @@
+package week2.stock;
+
 // the Client
 public class StockApp {
     public static void main(String[] args) {
