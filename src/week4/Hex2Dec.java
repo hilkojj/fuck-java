@@ -1,4 +1,4 @@
-package chapter6;
+package week4;
 
 import java.util.Scanner;
 
@@ -29,7 +29,9 @@ public class Hex2Dec {
   public static int hexCharToDecimal(char ch) {
     if (ch >= 'A' && ch <= 'F')
       return 10 + ch - 'A';
-    else // ch is '0', '1', ..., or '9'
+    else if (ch >= '0' && ch <= '9')// ch is '0', '1', ..., or '9'
       return ch - '0';
+    else
+      throw new NumberFormatException(ch + " is not a valid HEX character");
   }
 }
