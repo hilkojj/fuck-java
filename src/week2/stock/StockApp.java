@@ -13,8 +13,9 @@ import java.util.concurrent.TimeUnit;
 
 // the Client
 public class StockApp extends Application {
-    public static void main(String[] args) {
+    public static StockApp instance;
 
+    public static void main(String[] args) {
         // create concrete subject
         StockGrabber stockGrabber = new StockGrabber();
 
@@ -28,23 +29,31 @@ public class StockApp extends Application {
         executor.scheduleAtFixedRate(new GetTheStock(stockGrabber, "oracle", 24.75d), 0, 3, TimeUnit.SECONDS);
 
         launch(args);
+
     }
+
+
+    String stock1String = "Stock 1:";
+    String stock2String = "Stock 2:";
+    String stock3String = "Stock 3:";
+    Label stock1Label;
+    Label stock2Label;
+    Label stock3Label;
 
     @Override
     public void start(Stage primaryStage) {
+        instance = this;
+
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
 
-        String stock1String = "Stock 1:";
-        Label stock1Label = new Label(stock1String);
+        stock1Label = new Label(stock1String);
         grid.addRow(0,stock1Label);
 
-        String stock2String = "Stock 2:";
-        Label stock2Label = new Label(stock2String);
+        stock2Label = new Label(stock2String);
         grid.addRow(1,stock2Label);
 
-        String stock3String = "Stock 3:";
-        Label stock3Label = new Label(stock3String);
+        stock3Label = new Label(stock3String);
         grid.addRow(2,stock3Label);
 
         // Create a scene and place it in the stage
