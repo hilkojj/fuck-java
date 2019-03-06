@@ -1,5 +1,7 @@
 package week2.stock;
 
+import javafx.application.Platform;
+
 public class StockObserver implements Observer {
     
     private double ibmPrice;
@@ -28,11 +30,13 @@ public class StockObserver implements Observer {
         this.ibmPrice = ibmPrice;
         this.aaplPrice = aaplPrice;
         this.googPrice = googPrice;
+
         printThePrices();
     }
-    
+
     public void printThePrices(){
-        System.out.println(observerID + "\nIBM: " + ibmPrice + "\nAAPL: " + 
+        System.out.println(observerID + "\nIBM: " + ibmPrice + "\nAAPL: " +
                 aaplPrice + "\nGOOG: " + googPrice + "\n");
+        Platform.runLater(()->{ StockApp s = StockApp.instance; s.stock1Label.setText(s.stock1String + " " + ibmPrice); s.stock2Label.setText(s.stock2String + " " + aaplPrice); s.stock3Label.setText(s.stock3String + " " + googPrice); });
     }
 }

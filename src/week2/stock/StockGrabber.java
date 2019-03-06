@@ -15,20 +15,20 @@ public class StockGrabber implements Subject {
 
     public void register(Observer newObserver) { observers.add(newObserver); }
     public void unregister(Observer newObserver) { observers.remove(newObserver); }
-    public void notifyObserver() { observers.forEach(obs -> obs.update(ibmPrice, applePrice, oraclePrice)); }
+    public void notifyObservers() { observers.forEach(obs -> obs.update(ibmPrice, applePrice, oraclePrice)); }
 
     public void setApplePrice(double newApplePrice) {
         this.applePrice = newApplePrice;
-        notifyObserver();
+        notifyObservers();
     }
 
     public void setIBMPrice(double newIBMPrice) {
         this.ibmPrice = newIBMPrice;
-        notifyObserver();
+        notifyObservers();
     }
 
     public void setOraclePrice(double newOraclePrice) {
         this.oraclePrice = newOraclePrice;
-        notifyObserver();
+        notifyObservers();
     }
 }
