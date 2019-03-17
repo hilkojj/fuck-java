@@ -14,12 +14,10 @@ public class Stereo implements ElectronicDevice {
     public void volumeUp() {
         volume++;
         System.out.println("Stereo Volume is at: " + volume);
-
     }
 
-    public void volumenDown() {
+    public void volumeDown() {
         volume--;
         System.out.println("Stereo Volume is at: " + volume);
-
     }
 }

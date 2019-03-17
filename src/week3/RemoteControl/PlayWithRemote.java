@@ -6,8 +6,7 @@ public class PlayWithRemote{
     public static void main(String[] args){
         
         // create command receiver
-        RemoteControl remote = new RemoteControl();
-        ElectronicDevice newDevice = remote.getDevice();
+        ElectronicDevice newDevice = RemoteControl.getDevice(0); // channel decides witch devise will listen
         
         // create a concrete command, register the receiver
         TurnTVOn onCommand = new TurnTVOn(newDevice);
@@ -23,5 +22,6 @@ public class PlayWithRemote{
         
         // invoke another concrete command
         b.execute(offCommand);
+        b.undo();
     }
 }
