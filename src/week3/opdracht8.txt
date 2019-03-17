@@ -1,0 +1,43 @@
+
+a)
+
+Singleton pattern.
+
+Class diagram: https://dzone.com/storage/temp/6157957-singleton.png
+
+Het doel van een singleton is om maar 1 instance te hebben van een class.
+Er kunnen onmogelijk meerdere instances zijn van dezelfde class.
+
+Iedereen kan deze ene instance opvragen doormiddel van een static method/functie.
+
+
+
+-------------------------------------------------------------
+
+
+
+b + c) voorbeeld applicatie:
+
+Timo en ik hebben vorig jaar een game gemaakt met het Model-View-Controller pattern.
+De game heeft verschillende Controllers, van elke soort controller mag er maar 1 zijn.
+
+Dit hebben we opgelost door een singleton te maken.
+De singleton heette 'CompositionRoot'
+
+De CompositionRoot is verantwoordelijk om alle benodigde controllers voor de game te maken en te bewaren.
+
+De enige instance van CompositionRoot is overal op te vragen met CompositionRoot.getInstance()
+Via die instance kan je alle Controllers van de game bereiken.
+
+// Code/Classes:
+
+https://github.com/timostrating/parkingsimulator/tree/master/core/src/com/parkingtycoon
+
+
+--------------------------------------------------------------------
+
+
+d)
+
+zie opdracht8_class_diagram.png
+
