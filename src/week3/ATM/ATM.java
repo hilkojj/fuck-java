@@ -8,7 +8,7 @@ public class ATM
 
     // define an initial state
     public ATM() {
-        setState(new IdleState());
+        setState(new ATMState.Idle());
     }
 
     void setState(ATMState state) {
