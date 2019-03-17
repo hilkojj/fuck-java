@@ -1,3 +1,5 @@
+package week3.RemoteControl;
+
 // a comand receiver
 public class Television implements ElectronicDevice {
 

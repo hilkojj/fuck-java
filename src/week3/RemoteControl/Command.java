@@ -1,3 +1,5 @@
+package week3.RemoteControl;
+
 // the command interface
 public interface Command {
     

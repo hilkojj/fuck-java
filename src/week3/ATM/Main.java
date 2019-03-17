@@ -1,3 +1,5 @@
+package week3.ATM;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

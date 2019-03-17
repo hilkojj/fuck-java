@@ -1,3 +1,5 @@
+package week3.ATM;
+
 public interface ATMState {
 
     void insertCard(ATM atm);

@@ -1,10 +1,13 @@
+package week3.RemoteControl;
+
 // the client
 public class PlayWithRemote{
     
     public static void main(String[] args){
         
         // create command receiver
-        ElectronicDevice newDevice = RemoteControl.getDevice();
+        RemoteControl remote = new RemoteControl();
+        ElectronicDevice newDevice = remote.getDevice();
         
         // create a concrete command, register the receiver
         TurnTVOn onCommand = new TurnTVOn(newDevice);
